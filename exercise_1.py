@@ -1,25 +1,23 @@
 '''
-Exercise 1: Tensor Basics
-Create a Python script that does the following:
-
-Create a 1D tensor from a Python list [1, 2, 3, 4, 5]
-Create a 3x3 tensor of all zeros
-Create a 3x3 tensor of random values (normal distribution)
-Perform element-wise multiplication of the random tensor with itself
-Print the shape, dtype, and device of each tensor you created
+Deep Learning with Pytorch 2 for pytorch fundamentals"
+https://www.youtube.com/watch?v=2yBEZzQu8dA&list=PLCC34OHNcOtpcgR9LEYSdi9r7XIbpkpK1&index=2
 '''
 
 import torch
+import numpy as np
 
-# Create a 1D tensor from a Python list
-example_tensor = torch.tensor([1,2,3,4,5])
-# Create a 3x3 tensor of all zeros
-three_by_three = torch.zeros(3, 3)
-# Create a 3x3 tensor of random values (normal distribution)
-rand_three_by_three = torch.rand(3,3)
-# Perform element-wise multiplication of the random tensor with itself
-rand_three_by_three  = torch.mul(rand_three_by_three, rand_three_by_three)
-# Print the shape, dtype, and device of each tensor you created
-print(example_tensor.shape, three_by_three.shape, rand_three_by_three.shape)
-print(example_tensor.dtype, three_by_three.dtype, rand_three_by_three.dtype)
-print(example_tensor.device, three_by_three.device, rand_three_by_three.device)
+# Regular list in python
+my_list = [1,2,3,4,5]
+print(my_list)
+
+# numpy array
+np1 = np.random.rand(3)
+print(np1)
+
+# tensor array
+tensor_2d = torch.randn(3,4)
+print(tensor_2d)
+
+# create tensor out of numpy array
+my_tensor = torch.tensor(np1)
+print(my_tensor)
