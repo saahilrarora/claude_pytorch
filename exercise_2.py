@@ -1,5 +1,5 @@
 '''
-Deep Learning with Pytorch 2 for pytorch fundamentals -- tensor operations
+Tensor operations
 https://www.youtube.com/watch?v=Q5gK3qDA5Tc&list=PLCC34OHNcOtpcgR9LEYSdi9r7XIbpkpK1&index=3
 '''
 
