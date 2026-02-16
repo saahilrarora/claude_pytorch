@@ -4,6 +4,9 @@ https://www.youtube.com/watch?v=JHWqWIoac2I&list=PLCC34OHNcOtpcgR9LEYSdi9r7XIbpk
 
 Load Data and Train Neural Network Model
 https://www.youtube.com/watch?v=Xp0LtPBcos0&list=PLCC34OHNcOtpcgR9LEYSdi9r7XIbpkpK1&index=6
+
+Evaluate Test Data Set On Network
+https://www.youtube.com/watch?v=rgBu8CbH9XY&list=PLCC34OHNcOtpcgR9LEYSdi9r7XIbpkpK1&index=7
 '''
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -99,3 +102,10 @@ plt.plot(range(epochs), losses)
 plt.ylabel("loss")
 plt.xlabel("epoch")
 plt.show()
+
+# Evaluate model on test data set (validate model on test set)
+with torch.no_grad(): # turn off back propogation
+    y_eval = model.forward(X_test) # X_test are features from our test set, y_eval will be our predictions
+    loss = criterion(y_eval, y_test) # Find the loss or error
+
+print(loss)
